@@ -1,0 +1,36 @@
+﻿@model StudentWebsite.Models.Student
+
+<h1>Create New Student</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="StudentName" class="form-label"></label>
+        <input asp-for="StudentName" class="form-control" />
+        <span asp-validation-for="StudentName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="StudentAge" class="form-label"></label>
+        <input asp-for="StudentAge" class="form-control" />
+        <span asp-validation-for="StudentAge" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="StudentBirthday" class="form-label"></label>
+        <input asp-for="StudentBirthday" type="date" class="form-control" />
+        <span asp-validation-for="StudentBirthday" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="StudentYearSection" class="form-label"></label>
+        <input asp-for="StudentYearSection" class="form-control" />
+        <span asp-validation-for="StudentYearSection" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Save Student</button>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
